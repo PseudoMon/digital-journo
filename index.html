@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Digital Journo</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> 
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/digi-journo.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Scrips -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.stat p').click(function() {
+        $('.stat p').not($(this)).removeClass('selected');
+        $(this).toggleClass('selected'); 
+    
+        $('.stattext').not($(this).next()).slideUp();
+        $(this).next().slideToggle();
+    });
+    
+    $('#archives .year').click(function() {
+        $(this).toggleClass('selected'); 
+        $(this).next().toggle();
+    });
+});
+
+</script>  
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <div class="container">
+    <div class="row">
+        <div class="seven columns">
+        
+        <header>
+        <h1><a href="index.html">Digital Journo</a></h1>
+        </header>
+        
+        <div class="cattitle">February 2027</div>
+        
+        <article class="entry">
+            <div class="row head">
+                <h1 class="seven columns"><a href="single.html">A Digital Journal Theme</a></h1>
+                <span class="five columns timestamp">Wed, 10 February 2027</time>
+            </div>
+            
+            <div class="row text">
+                <p><strong>Digital Journo</strong> is a simple theme made for blogs or microblogs, based on old Japanese blogs. It's most suitable for blogs that have short, perhaps daily, posts, but can also be suited for anything. <span class="more">(<a href="single.html">more</a>)</span></p>
+            </div>
+            
+            <div class="row stats">
+                <div class="one-third column stat">
+                    <p>Thinking</p>
+                    <div class="stattext">
+                        About designs
+                    </div>
+                </div>
+                <div class="one-third column stat">
+                    <p>Playing</p>
+                    <div class="stattext">
+                        Persona 4
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <article class="entry">
+            <div class="row head">
+                <h1 class="seven columns"><a href="">Dream Title</a></h1>
+                <span class="five columns timestamp">Tue, 9 February 2027</time>
+            </div>
+            
+            <div class="row text">
+                <p>Aa kono mama bokutachi no koe ga sekai no hajikko made kieru koto naku todoitari shitara ii nonina soshitara nee futari de donna kotoba o hanatou kieru koto nai yakusoku o futari de "se-no" de iou<span class="more">(<a href="#">more</a>)</span></p>
+            </div>
+            
+            <div class="row stats">
+                <div class="one-third column stat">
+                    <p>Listening</p>
+                    <div class="stattext">
+                        RADWIMPS - Yume Tourou
+                    </div>
+                </div>
+                <div class="one-third column stat">
+                    <p>Playing</p>
+                    <div class="stattext">
+                        Hollow Knight
+                    </div>
+                </div>
+                <div class="one-third column stat">
+                    <p>Reading</p>
+                    <div class="stattext">
+                        Al Gore - The Future
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <article class="entry">
+            <div class="row head">
+                <h1 class="seven columns">Just Call Me Anything</h1>
+                <span class="five columns timestamp">Tue, 9 February 2027</time>
+            </div>
+            
+            <div class="row text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="more">(<a href="#">more</a>)</span></p>
+            </div>
+            
+            <div class="row stats">
+                <div class="one-third column stat">
+                    <p>Listening</p>
+                    <div class="stattext">
+                        Two Door Cinema Club - Remember Your Name
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        
+        </div>
+        
+        <div class="five columns">
+        
+        
+          <div class="sidebar">
+            <div id="sideprofile">
+                <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pleiades_large.jpg/280px-Pleiades_large.jpg" id="profpic"></center>
+                <h2 id="profname">Starshooter</h2>
+                <div class="desc">
+                    <p>believes he's a pretty cool guy, some of the time.</p> <p>Probably unremarkable</p>
+                    <p>(<a href="/about">more about</a>)
+                </div>
+            </div>
+            
+            <nav id="archives">
+                <h2>Archives</h2>
+                <ul>
+                  <li class="year">2026</li>
+                  <ul class="months">
+                    <li><a href="">Months Etc</a></li>
+                  </ul>
+                  <li class="year">2027</li>
+                  <ul class="months">
+                    <li><a href="/2027/january">January</a></li>
+                    <li><a href="/2027/february">February</a><li>
+                  </ul>
+                </ul>
+            </nav>
+            
+          </div>
+        </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Digital Journo</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> 
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/digi-journo.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Scrips -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.stat p').click(function() {
+        $('.stat p').not($(this)).removeClass('selected');
+        $(this).toggleClass('selected'); 
+    
+        $('.stattext').not($(this).next()).slideUp();
+        $(this).next().slideToggle();
+    });
+    
+    $('#archives .year').click(function() {
+        $(this).toggleClass('selected'); 
+        $(this).next().toggle();
+    });
+});
+
+</script>  
+  
+<style>
+.text h2 {
+    border-bottom: solid 2px;
+    font-size: 2.0rem;
+}
+</style>  
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <div class="container">
+    <div class="row">
+        <div class="seven columns">
+        
+        <header>
+        <h1><a href="index.html">Digital Journo</a></h1>
+        </header>
+        
+        <article class="entry">
+            <div class="row head">
+                <h1 class="seven columns">A Digital Journal Theme</h1>
+                <span class="five columns timestamp">Wed, 10 February 2027</time>
+            </div>
+            
+            <div class="row text">
+                <p><strong>Digital Journo</strong> is a simple theme made for blogs or microblogs, based on old Japanese blogs. It's most suitable for blogs that have short, perhaps daily, posts, but can also be suited for anything.</p>
+                
+                <p>Every post can have some extra info attached to it, which will be included under the post (in the main/archive page) and in the sidebar (in single post view page); useful if you want to include some status, like the book you're reading, or what you're eating at the day you're writing the post.</p>
+
+                <p>These pages are made by <a href="http://pseudomon.github.io/">PseudoMon</a>. For details of use, see the <a href="https://github.com/PseudoMon/digital-journo">repo</a>.
+                
+                <p>Warning: Stock text follows.</p>
+
+                <h2>A Subtitle!</h2>
+                <p><strong>Bold strokes</strong>. Volume he been the screen circumstances <em>torn of each be no started plan objects muff shall fall</em> many hundred the brought I skyline but the with</p>
+
+                <pre><code>def fine():
+    if fine == True:
+        print("This is fine")
+    else:
+        print("Stil fine.")
+                </code></pre>
+                <p>Chosen to <code>involved</code>. For leather of or pointing in my greediness the be here supplies computer console in many and through cache. One create project years tricks or still the could with samples sitting everything been end upon their sport.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Athene_noctua_%28cropped%29.jpg/220px-Athene_noctua_%28cropped%29.jpg">
+                <p>Image are attached with no strings to it. Tables hopefully look fine as tables should.</p>
+                 <table>
+                  <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                  </tr>
+                  <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                  </tr>
+                </table> 
+                
+            </div>
+            
+        </article>
+        
+        </div>
+        
+        <div class="five columns">
+        
+        
+          <div class="sidebar">
+            <div id="sideprofile">
+                <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pleiades_large.jpg/280px-Pleiades_large.jpg" id="profpic"></center>
+                <h2 id="profname">Starshooter</h2>
+                <div class="desc">
+                    <p>believes he's a pretty cool guy, some of the time.</p> <p>Probably unremarkable</p>
+                    <p>(<a href="/about">more about</a>)
+                </div>
+            </div>
+            
+            <div class="row stats">
+                <div class="twelve columns stat">
+                    <p>Listening</p>
+                    <div class="stattext">
+                        RADWIMPS - Yume Tourou
+                    </div>
+                </div>
+                <div class="twelve columns stat">
+                    <p>Playing</p>
+                    <div class="stattext">
+                        Hollow Knight
+                    </div>
+                </div>
+                <div class="twelve columns stat">
+                    <p>Reading</p>
+                    <div class="stattext">
+                        Al Gore - The Future
+                    </div>
+            </div>
+            
+            <nav id="archives">
+                <h2>Archives</h2>
+                <ul>
+                  <li class="year">2026</li>
+                  <ul class="months">
+                    <li><a href="">Months Etc</a></li>
+                  </ul>
+                  <li class="year">2027</li>
+                  <ul class="months">
+                    <li><a href="/2027/january">January</a></li>
+                    <li><a href="/2027/february">February</a><li>
+                  </ul>
+                </ul>
+            </nav>
+            
+          </div>
+        </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
